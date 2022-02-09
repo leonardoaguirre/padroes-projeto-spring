@@ -28,8 +28,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springdoc</groupId>
-			<artifactId>sample-springdoc-openapi-microservices</artifactId>
-			<version>3.1.5</version>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
