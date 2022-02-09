@@ -11,14 +11,25 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+/**
+ * Implementação da Strategy ClienteService, a qual pode ser
+ * injetada pelo Spring (via Autowired}). Com isso, como essa classe é um
+ * service, ela será tratada como um Singleton
+ *
+ */
+
 @Service
 public class ClienteServiceImpl implements ClienteService {
+    // Singleton: Injetar os componentes do Spring com @Autowired.
     @Autowired
     private ClienteRepository clienteRepository;
     @Autowired
     private EnderecoRepository enderecoRepository;
     @Autowired
     private ViaCepService viaCepService;
+
+    // Strategy: Implementar os métodos definidos na interface.
+    // Facade: Abstrair integrações com subsistemas, provendo uma interface simples.
 
     @Override
     public Iterable<Cliente> buscarTodos() {
